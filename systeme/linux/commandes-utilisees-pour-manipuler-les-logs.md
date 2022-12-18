@@ -1,4 +1,4 @@
-# Commandes Linux fréquemment utilisées pour manipuler les logs
+# Commandes utilisées pour manipuler les logs
 
 1. `tail` : permet de afficher les dernières lignes d'un fichier de log.
 2. `grep` : permet de rechercher des chaînes de caractères dans un fichier de log.
