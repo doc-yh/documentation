@@ -1,4 +1,4 @@
-# Pour afficher les logs
+# Tail
 
 Pour afficher les 10 dernières lignes d'un fichier en temps réel :
 

@@ -1,4 +1,4 @@
-# Rendre un script exécutable
+# Chmod
 
 Donner les permissions d'exécution d'un script à tous les utilisateurs du système :
 

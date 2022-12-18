@@ -1,4 +1,4 @@
-# Exemples d'utilisation de la commande 'grep'
+# Grep
 
 Afficher toutes les lignes d'un fichier qui contiennent un mot spécifique :
 

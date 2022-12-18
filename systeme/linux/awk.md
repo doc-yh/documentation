@@ -1,4 +1,4 @@
-# Exemples d'utilisation de la commande 'awk'
+# Awk
 
 Afficher toutes les lignes d'un fichier qui contiennent un mot spécifique :
 
