@@ -2,6 +2,7 @@
 
 * [Système](README.md)
   * [Linux](systeme/linux/README.md)
+    * [Informations système](systeme/linux/informations-systeme.md)
     * [Commandes utilisées pour manipuler les logs](systeme/linux/commandes-utilisees-pour-manipuler-les-logs.md)
     * [Grep](systeme/linux/grep.md)
     * [Awk](systeme/linux/awk.md)
