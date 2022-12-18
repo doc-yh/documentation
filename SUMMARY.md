@@ -7,6 +7,7 @@
     * [Awk](systeme/linux/awk.md)
     * [Tail](systeme/linux/tail.md)
     * [Chmod](systeme/linux/chmod.md)
+    * [Disk usage (du)](systeme/linux/disk-usage-du.md)
     * [Stocker le résultat d'une commande](systeme/linux/stocker-le-resultat-dune-commande.md)
     * [Arrêter un processus](systeme/linux/arreter-un-processus.md)
     * [Lister les processus en cours d'execution](systeme/linux/lister-les-processus-en-cours-dexecution.md)
