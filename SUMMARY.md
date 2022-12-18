@@ -2,6 +2,7 @@
 
 * [Système](README.md)
   * [Linux](systeme/linux/README.md)
+    * [Commandes Linux fréquemment utilisées pour manipuler les logs](systeme/linux/commandes-linux-frequemment-utilisees-pour-manipuler-les-logs.md)
     * [Grep](systeme/linux/grep.md)
     * [Awk](systeme/linux/awk.md)
     * [Tail](systeme/linux/tail.md)
