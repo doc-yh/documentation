@@ -12,4 +12,4 @@
     * [Disk usage (du)](systeme/linux/disk-usage-du.md)
     * [Stocker le résultat d'une commande](systeme/linux/stocker-le-resultat-dune-commande.md)
     * [Lister les ports utilisés](systeme/linux/lister-les-ports-utilises.md)
-    * [Exemple de cron job](systeme/linux/exemple-de-cron-job.md)
+    * [Cron job](systeme/linux/cron-job.md)
