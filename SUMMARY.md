@@ -2,6 +2,8 @@
 
 * [Système](README.md)
   * [Linux](systeme/linux/README.md)
+    * [Exemples d'utilisation de la commande 'grep'](systeme/linux/exemples-dutilisation-de-la-commande-grep.md)
+    * [Exemples d'utilisation de la commande 'awk'](systeme/linux/exemples-dutilisation-de-la-commande-awk.md)
     * [Rendre un script exécutable](systeme/linux/rendre-un-script-executable.md)
     * [Stocker le résultat d'une commande](systeme/linux/stocker-le-resultat-dune-commande.md)
     * [Arrêter un processus](systeme/linux/arreter-un-processus.md)
