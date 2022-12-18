@@ -2,6 +2,7 @@
 
 * [Système](README.md)
   * [Linux](systeme/linux/README.md)
+    * [Gestion des processus sur Linux](systeme/linux/gestion-des-processus-sur-linux.md)
     * [Informations système](systeme/linux/informations-systeme.md)
     * [Commandes utilisées pour manipuler les logs](systeme/linux/commandes-utilisees-pour-manipuler-les-logs.md)
     * [Grep](systeme/linux/grep.md)
@@ -10,7 +11,5 @@
     * [Chmod](systeme/linux/chmod.md)
     * [Disk usage (du)](systeme/linux/disk-usage-du.md)
     * [Stocker le résultat d'une commande](systeme/linux/stocker-le-resultat-dune-commande.md)
-    * [Arrêter un processus](systeme/linux/arreter-un-processus.md)
-    * [Lister les processus en cours d'execution](systeme/linux/lister-les-processus-en-cours-dexecution.md)
     * [Lister les ports utilisés](systeme/linux/lister-les-ports-utilises.md)
     * [Exemple de cron job](systeme/linux/exemple-de-cron-job.md)
