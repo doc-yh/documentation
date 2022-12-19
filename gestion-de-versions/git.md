@@ -27,6 +27,14 @@ Il est possible de modifier un commit existant dans Git en utilisant la commande
 La commande `git stash` permet de "cacher" temporairement les modifications apportées à vos fichiers dans le dépôt Git, afin que vous puissiez basculer sur une autre branche ou exécuter une autre commande sans avoir à commit ou abandonner vos changements en cours.
 
 Pour réappliquer les modifications mises en attente (stashed) plus tard, vous pouvez utiliser la commande `git stash apply`. Cette commande réapplique les dernières modifications mises en attente et les ajoute de nouveau à votre répertoire de travail.
+
+Pour visualiser le contenu d'un stash dans Git, vous pouvez utiliser la commande `git stash show`. Cette commande affiche les différences entre l'état actuel de votre dépôt et le stash que vous souhaitez afficher.
+
+Si vous souhaitez afficher les différences pour tous les fichiers, y compris les fichiers ajoutés et supprimés, vous pouvez utiliser l'option `-p` :
+
+```bash
+git stash show -p
+```
 {% endtab %}
 
 {% tab title="Avec un nom" %}
@@ -46,6 +54,12 @@ Pour réappliquer un stash nommé :
 
 ```bash
 git stash apply stash@{Nom du stash} --index
+```
+
+Pour visualiser le contenu d'un stash :&#x20;
+
+```bash
+git stash show stash@{Nom du stash}
 ```
 {% endtab %}
 {% endtabs %}
