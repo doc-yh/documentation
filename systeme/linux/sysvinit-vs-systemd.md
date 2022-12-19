@@ -82,3 +82,18 @@ journalctl --since "2022-12-01 00:00:00" --until "2022-12-02 00:00:00" myprogram
 ```
 
 Cela affichera les journaux du service Java pour la période allant du 1er décembre 2022 à minuit jusqu'au 2 décembre 2022 à minuit.
+
+#### Comment configurer un service Java pour qu'il démarre après un service mongo par exemple
+
+```bash
+[Unit]
+Description=My Java program
+After=mongodb.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/java -jar /path/to/MyProgram.jar
+
+[Install]
+WantedBy=multi-user.target
+```
