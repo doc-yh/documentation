@@ -34,50 +34,6 @@ Par exemple, si vous souhaitez afficher les commits de l'auteur "Alice" depuis l
 git log --author="Alice" --since="2020-01-01"
 ```
 
-## Stash
-
-{% tabs %}
-{% tab title="Sans nom" %}
-La commande `git stash` permet de "cacher" temporairement les modifications apportées à vos fichiers dans le dépôt Git, afin que vous puissiez basculer sur une autre branche ou exécuter une autre commande sans avoir à commit ou abandonner vos changements en cours.
-
-Pour réappliquer les modifications mises en attente (stashed) plus tard, vous pouvez utiliser la commande `git stash apply`. Cette commande réapplique les dernières modifications mises en attente et les ajoute de nouveau à votre répertoire de travail.
-
-Pour visualiser le contenu d'un stash dans Git, vous pouvez utiliser la commande `git stash show`. Cette commande affiche les différences entre l'état actuel de votre dépôt et le stash que vous souhaitez afficher.
-
-Si vous souhaitez afficher les différences pour tous les fichiers, y compris les fichiers ajoutés et supprimés, vous pouvez utiliser l'option `-p` :
-
-```shell
-git stash show -p
-```
-{% endtab %}
-
-{% tab title="Avec un nom" %}
-Vous pouvez donner un nom à un stash en utilisant la commande git stash save avec l'option --include-untracked. Cette option inclut également les fichiers non suivis (untracked) dans le stash, ce qui vous permet de les enregistrer dans votre dépôt Git plus tard, Voici un exemple :
-
-```shell
-git stash save --include-untracked "Nom du stash"
-```
-
-Vous pouvez également utiliser la commande `git stash save` sans l'option `--include-untracked` pour ne mettre en attente (stash) que les modifications apportées aux fichiers suivis (tracked) :
-
-```shell
-git stash save "Nom du stash"
-```
-
-Pour réappliquer un stash nommé :
-
-```shell
-git stash apply stash@{Nom du stash} --index
-```
-
-Pour visualiser le contenu d'un stash :&#x20;
-
-```shell
-git stash show stash@{Nom du stash}
-```
-{% endtab %}
-{% endtabs %}
-
 ## Branch et checkout
 
 Pour créer une nouvelle branche dans Git, vous pouvez utiliser la commande `git branch`. Cette commande vous permet de créer une nouvelle branche à partir de votre position actuelle dans le dépôt.
@@ -250,3 +206,47 @@ Voici comment vous pouvez effectuer un cherrypick pour récupérer un commit de 
 2. Trouvez le hash du commit que vous souhaitez récupérer en utilisant la commande `git log`. Prenez note du hash du commit.
 3. Basculez sur la branche `master` en utilisant la commande `git checkout master`.
 4. Utilisez la commande `git cherry-pick <hash du commit>` pour récupérer le commit et l'appliquer à la branche `master`. Si vous rencontrez des conflits, vous devrez les résoudre avant de pouvoir poursuivre.
+
+## Stash
+
+{% tabs %}
+{% tab title="Sans nom" %}
+La commande `git stash` permet de "cacher" temporairement les modifications apportées à vos fichiers dans le dépôt Git, afin que vous puissiez basculer sur une autre branche ou exécuter une autre commande sans avoir à commit ou abandonner vos changements en cours.
+
+Pour réappliquer les modifications mises en attente (stashed) plus tard, vous pouvez utiliser la commande `git stash apply`. Cette commande réapplique les dernières modifications mises en attente et les ajoute de nouveau à votre répertoire de travail.
+
+Pour visualiser le contenu d'un stash dans Git, vous pouvez utiliser la commande `git stash show`. Cette commande affiche les différences entre l'état actuel de votre dépôt et le stash que vous souhaitez afficher.
+
+Si vous souhaitez afficher les différences pour tous les fichiers, y compris les fichiers ajoutés et supprimés, vous pouvez utiliser l'option `-p` :
+
+```shell
+git stash show -p
+```
+{% endtab %}
+
+{% tab title="Avec un nom" %}
+Vous pouvez donner un nom à un stash en utilisant la commande git stash save avec l'option --include-untracked. Cette option inclut également les fichiers non suivis (untracked) dans le stash, ce qui vous permet de les enregistrer dans votre dépôt Git plus tard, Voici un exemple :
+
+```shell
+git stash save --include-untracked "Nom du stash"
+```
+
+Vous pouvez également utiliser la commande `git stash save` sans l'option `--include-untracked` pour ne mettre en attente (stash) que les modifications apportées aux fichiers suivis (tracked) :
+
+```shell
+git stash save "Nom du stash"
+```
+
+Pour réappliquer un stash nommé :
+
+```shell
+git stash apply stash@{Nom du stash} --index
+```
+
+Pour visualiser le contenu d'un stash :&#x20;
+
+```shell
+git stash show stash@{Nom du stash}
+```
+{% endtab %}
+{% endtabs %}
