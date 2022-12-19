@@ -22,6 +22,31 @@ Il est possible de modifier un commit existant dans Git en utilisant la commande
 
 ## Stash
 
+{% tabs %}
+{% tab title="Sans nom" %}
 La commande `git stash` permet de "cacher" temporairement les modifications apportées à vos fichiers dans le dépôt Git, afin que vous puissiez basculer sur une autre branche ou exécuter une autre commande sans avoir à commit ou abandonner vos changements en cours.
 
 Pour réappliquer les modifications mises en attente (stashed) plus tard, vous pouvez utiliser la commande `git stash apply`. Cette commande réapplique les dernières modifications mises en attente et les ajoute de nouveau à votre répertoire de travail.
+{% endtab %}
+
+{% tab title="Avec un nom" %}
+Vous pouvez donner un nom à un stash en utilisant la commande git stash save avec l'option --include-untracked. Cette option inclut également les fichiers non suivis (untracked) dans le stash, ce qui vous permet de les enregistrer dans votre dépôt Git plus tard, Voici un exemple :
+
+```php
+git stash save --include-untracked "Nom du stash"
+```
+
+Vous pouvez également utiliser la commande `git stash save` sans l'option `--include-untracked` pour ne mettre en attente (stash) que les modifications apportées aux fichiers suivis (tracked) :
+
+```python
+git stash save "Nom du stash"
+```
+
+Pour réappliquer un stash nommé :
+
+```scss
+git stash apply stash@{Nom du stash} --index
+```
+{% endtab %}
+{% endtabs %}
+
