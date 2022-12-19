@@ -22,6 +22,18 @@ Il est possible de modifier un commit existant dans Git en utilisant la commande
 
 Pour faire un commit vide sans ajouter de fichiers, vous pouvez utiliser la commande `git commit --allow-empty` avec un message de commit vide.
 
+## Log
+
+Pour lister les commits dans votre référentiel Git local, vous pouvez utiliser la commande `git log`. Cette commande affichera une liste de tous les commits dans votre référentiel, avec leurs hash de commit, auteurs et messages de commit.
+
+Vous pouvez également utiliser des options avec la commande `git log` pour afficher des informations supplémentaires ou filtrer les commits affichés. Par exemple, vous pouvez utiliser l'option `--author` pour afficher uniquement les commits créés par un auteur spécifique, ou l'option `--since` pour afficher uniquement les commits créés après une date spécifique.
+
+Par exemple, si vous souhaitez afficher les commits de l'auteur "Alice" depuis le 1er janvier 2020, vous pouvez utiliser la commande suivante:
+
+```bash
+git log --author="Alice" --since="2020-01-01"
+```
+
 ## Stash
 
 {% tabs %}
