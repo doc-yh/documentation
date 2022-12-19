@@ -34,50 +34,6 @@ Par exemple, si vous souhaitez afficher les commits de l'auteur "Alice" depuis l
 git log --author="Alice" --since="2020-01-01"
 ```
 
-## Stash
-
-{% tabs %}
-{% tab title="Sans nom" %}
-La commande `git stash` permet de "cacher" temporairement les modifications apportées à vos fichiers dans le dépôt Git, afin que vous puissiez basculer sur une autre branche ou exécuter une autre commande sans avoir à commit ou abandonner vos changements en cours.
-
-Pour réappliquer les modifications mises en attente (stashed) plus tard, vous pouvez utiliser la commande `git stash apply`. Cette commande réapplique les dernières modifications mises en attente et les ajoute de nouveau à votre répertoire de travail.
-
-Pour visualiser le contenu d'un stash dans Git, vous pouvez utiliser la commande `git stash show`. Cette commande affiche les différences entre l'état actuel de votre dépôt et le stash que vous souhaitez afficher.
-
-Si vous souhaitez afficher les différences pour tous les fichiers, y compris les fichiers ajoutés et supprimés, vous pouvez utiliser l'option `-p` :
-
-```shell
-git stash show -p
-```
-{% endtab %}
-
-{% tab title="Avec un nom" %}
-Vous pouvez donner un nom à un stash en utilisant la commande git stash save avec l'option --include-untracked. Cette option inclut également les fichiers non suivis (untracked) dans le stash, ce qui vous permet de les enregistrer dans votre dépôt Git plus tard, Voici un exemple :
-
-```shell
-git stash save --include-untracked "Nom du stash"
-```
-
-Vous pouvez également utiliser la commande `git stash save` sans l'option `--include-untracked` pour ne mettre en attente (stash) que les modifications apportées aux fichiers suivis (tracked) :
-
-```shell
-git stash save "Nom du stash"
-```
-
-Pour réappliquer un stash nommé :
-
-```shell
-git stash apply stash@{Nom du stash} --index
-```
-
-Pour visualiser le contenu d'un stash :&#x20;
-
-```shell
-git stash show stash@{Nom du stash}
-```
-{% endtab %}
-{% endtabs %}
-
 ## Branch et checkout
 
 Pour créer une nouvelle branche dans Git, vous pouvez utiliser la commande `git branch`. Cette commande vous permet de créer une nouvelle branche à partir de votre position actuelle dans le dépôt.
@@ -100,7 +56,39 @@ Vous pouvez également créer une nouvelle branche et basculer dessus en une seu
 git checkout -b nom-de-la-branche
 ```
 
-## Push
+## Rebase d'une branch vers le master
+
+Pour effectuer un rebase d'une feature branch vers le master, vous devez d'abord vous assurer que vous êtes sur la feature branch et que vous avez récupéré les dernières mises à jour du master. Pour ce faire, utilisez les commandes suivantes&#x20;
+
+```shell
+$ git checkout feature-branch
+$ git pull origin master
+```
+
+Une fois que vous êtes sur la feature branch et que vous avez récupéré les dernières mises à jour du master, vous pouvez exécuter la commande de rebase suivante :
+
+```shell
+$ git rebase master
+```
+
+Cela va appliquer les commits de la feature branch sur le dessus des commits du master, en les "rejouant" l'un après l'autre. Si des conflits surviennent pendant le rebase, vous devrez les résoudre avant de pouvoir continuer.
+
+## Merge d'une branch vers le master
+
+Pour merger une feature branch vers le master, vous devez d'abord vous assurer que vous êtes sur la branche master et que vous avez récupéré les dernières mises à jour du dépôt distant. Pour ce faire, utilisez les commandes suivantes :
+
+```shell
+$ git checkout master
+$ git pull origin master
+```
+
+Une fois que vous êtes sur la branche master et que vous avez récupéré les dernières mises à jour, vous pouvez merger la feature branch en utilisant la commande `git merge`. Par exemple :
+
+```shell
+$ git merge feature-branch
+```
+
+Cela va fusionner les commits de la feature branch dans le master, en créant un nouveau commit de fusion qui regroupe les modifications apportées dans les deux branches. Si des conflits surviennent pendant le merge, vous devrez les résoudre avant de pouvoir continuer.Push
 
 Pour envoyer une nouvelle branche dans un dépôt distant, vous pouvez utiliser la commande `git push`
 
@@ -217,36 +205,46 @@ Voici comment vous pouvez effectuer un cherrypick pour récupérer un commit de 
 3. Basculez sur la branche `master` en utilisant la commande `git checkout master`.
 4. Utilisez la commande `git cherry-pick <hash du commit>` pour récupérer le commit et l'appliquer à la branche `master`. Si vous rencontrez des conflits, vous devrez les résoudre avant de pouvoir poursuivre.
 
-## Rebase d'une branch vers le master
+## Stash
 
-Pour effectuer un rebase d'une feature branch vers le master, vous devez d'abord vous assurer que vous êtes sur la feature branch et que vous avez récupéré les dernières mises à jour du master. Pour ce faire, utilisez les commandes suivantes&#x20;
+{% tabs %}
+{% tab title="Sans nom" %}
+La commande `git stash` permet de "cacher" temporairement les modifications apportées à vos fichiers dans le dépôt Git, afin que vous puissiez basculer sur une autre branche ou exécuter une autre commande sans avoir à commit ou abandonner vos changements en cours.
 
-```shell
-$ git checkout feature-branch
-$ git pull origin master
-```
+Pour réappliquer les modifications mises en attente (stashed) plus tard, vous pouvez utiliser la commande `git stash apply`. Cette commande réapplique les dernières modifications mises en attente et les ajoute de nouveau à votre répertoire de travail.
 
-Une fois que vous êtes sur la feature branch et que vous avez récupéré les dernières mises à jour du master, vous pouvez exécuter la commande de rebase suivante :
+Pour visualiser le contenu d'un stash dans Git, vous pouvez utiliser la commande `git stash show`. Cette commande affiche les différences entre l'état actuel de votre dépôt et le stash que vous souhaitez afficher.
 
-```shell
-$ git rebase master
-```
-
-Cela va appliquer les commits de la feature branch sur le dessus des commits du master, en les "rejouant" l'un après l'autre. Si des conflits surviennent pendant le rebase, vous devrez les résoudre avant de pouvoir continuer.
-
-## Merge d'une branch vers le master
-
-Pour merger une feature branch vers le master, vous devez d'abord vous assurer que vous êtes sur la branche master et que vous avez récupéré les dernières mises à jour du dépôt distant. Pour ce faire, utilisez les commandes suivantes :
+Si vous souhaitez afficher les différences pour tous les fichiers, y compris les fichiers ajoutés et supprimés, vous pouvez utiliser l'option `-p` :
 
 ```shell
-$ git checkout master
-$ git pull origin master
+git stash show -p
 ```
+{% endtab %}
 
-Une fois que vous êtes sur la branche master et que vous avez récupéré les dernières mises à jour, vous pouvez merger la feature branch en utilisant la commande `git merge`. Par exemple :
+{% tab title="Avec un nom" %}
+Vous pouvez donner un nom à un stash en utilisant la commande git stash save avec l'option --include-untracked. Cette option inclut également les fichiers non suivis (untracked) dans le stash, ce qui vous permet de les enregistrer dans votre dépôt Git plus tard, Voici un exemple :
 
 ```shell
-$ git merge feature-branch
+git stash save --include-untracked "Nom du stash"
 ```
 
-Cela va fusionner les commits de la feature branch dans le master, en créant un nouveau commit de fusion qui regroupe les modifications apportées dans les deux branches. Si des conflits surviennent pendant le merge, vous devrez les résoudre avant de pouvoir continuer.
+Vous pouvez également utiliser la commande `git stash save` sans l'option `--include-untracked` pour ne mettre en attente (stash) que les modifications apportées aux fichiers suivis (tracked) :
+
+```shell
+git stash save "Nom du stash"
+```
+
+Pour réappliquer un stash nommé :
+
+```shell
+git stash apply stash@{Nom du stash} --index
+```
+
+Pour visualiser le contenu d'un stash :&#x20;
+
+```shell
+git stash show stash@{Nom du stash}
+```
+{% endtab %}
+{% endtabs %}
