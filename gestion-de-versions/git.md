@@ -20,6 +20,8 @@ Il est important de noter que la option `-a` ne prend en compte que les fichiers
 
 Il est possible de modifier un commit existant dans Git en utilisant la commande `git commit --amend`. Cette commande vous permet de fusionner les modifications en cours dans votre répertoire de travail avec le dernier commit de votre dépôt.
 
+Pour faire un commit vide sans ajouter de fichiers, vous pouvez utiliser la commande `git commit --allow-empty` avec un message de commit vide.
+
 ## Stash
 
 {% tabs %}
