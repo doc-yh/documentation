@@ -11,8 +11,6 @@
 9. `tee` : permet de rediriger la sortie d'une commande vers un fichier de log tout en l'affichant à l'écran.
 10. `logrotate` : permet de gérer la rotation et l'archivage des fichiers de log.
 
-##
-
 ## Tail
 
 Pour afficher les 10 dernières lignes d'un fichier en temps réel :
@@ -28,8 +26,6 @@ Pour afficher les 10 dernières lignes d'un fichier en temps réel :
 ```bash
 tail -f -n 10 /var/log/syslog | ccze -p ERROR=red -p INFO=green
 ```
-
-##
 
 ## Grep
 
