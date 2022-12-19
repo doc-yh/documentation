@@ -116,6 +116,8 @@ git pull --rebase origin ma_branche
 
 Cette commande récupèrera les modifications de la branche `ma_branche` sur le dépôt distant, puis les réappliquera sur votre branche locale en utilisant un "rebase". Cela permettra de fusionner les modifications du dépôt distant avec votre branche de manière à ce qu'il n'y ait pas de commits de fusion inutiles dans l'historique.
 
+### Conflits lors d'un rebase
+
 Lorsqu'un "rebase" échoue en raison de conflits, Git arrête le processus et vous indique où se situent les conflits dans les fichiers en question. Vous devrez alors résoudre ces conflits avant de pouvoir continuer le "rebase".
 
 Voici comment procéder :
@@ -151,3 +153,7 @@ git diff --name-only --diff-filter=U
 Cette commande affichera la liste des fichiers qui ont des conflits non résolus.
 
 Vous pouvez également utiliser la commande `git status` pour afficher la liste des fichiers en conflit. Le résultat inclura une section intitulée "Unmerged paths" qui liste les fichiers en conflit.
+
+### Annuler un rebase
+
+Il est possible d'annuler un "rebase" en cours en utilisant la commande `git rebase --abort`. Cette commande annulera le "rebase" en cours et vous ramènera à l'état de votre branche avant le début du "rebase".
