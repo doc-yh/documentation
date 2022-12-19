@@ -1,5 +1,48 @@
 # Git
 
+Voici une liste de commandes Git couramment utilisées :
+
+1. `git clone` : utilisée pour cloner un dépôt Git existant sur votre ordinateur.
+2. `git status` : vous permet de voir l'état de votre dépôt local, c'est-à-dire les fichiers qui ont été modifiés et qui n'ont pas encore été commités.
+3. `git add` : utilisée pour ajouter des fichiers à l'index, c'est-à-dire les préparer pour le prochain commit.
+4. `git commit` : utilisée pour enregistrer les modifications que vous avez apportées dans l'index dans votre dépôt local.
+5. `git push` : utilisée pour envoyer vos commits vers le dépôt distant (sur un serveur).
+6. `git pull` : utilisée pour synchroniser votre dépôt local avec le dépôt distant.
+7. `git branch` : utilisée pour gérer les branches dans votre dépôt.
+8. `git merge` : utilisée pour fusionner les branches dans votre dépôt.
+9. `git log` : utilisée pour afficher l'historique des commits de votre dépôt.
+10. `git stash` : utilisée pour mettre de côté des changements temporaires dans votre dépôt.
+11. `git config` : utilisée pour configurer les options de Git, comme votre nom d'utilisateur et votre adresse email.
+12. `git diff` : utilisée pour afficher les différences entre les fichiers dans votre dépôt.
+13. `git reset` : utilisée pour annuler des commits ou des changements dans votre dépôt.
+14. `git tag` : utilisée pour ajouter des tags (étiquettes) à des commits dans votre dépôt.
+15. `git rebase` : utilisée pour réappliquer les commits d'une branche sur une autre branche.
+16. `git cherry-pick` : utilisée pour sélectionner et appliquer individuellement des commits à partir d'une autre branche.
+17. `git fetch` : utilisée pour récupérer les derniers commits d'un dépôt distant sans fusionner les changements dans votre branche courante.
+18. `git gc` : utilisée pour optimiser et nettoyer votre dépôt local.
+19. `git ls-tree` : utilisée pour afficher le contenu d'un commit sous forme d'arborescence de fichiers et de répertoires.
+20. `git show` : utilisée pour afficher les détails d'un commit, comme les modifications apportées et l'auteur du commit.
+21. `git blame` : utilisée pour afficher les lignes modifiées dans chaque fichier et le commit qui a apporté ces modifications.
+22. `git shortlog` : utilisée pour afficher un résumé des commits d'un dépôt, regroupés par auteur.
+23. `git grep` : utilisée pour rechercher des chaînes de caractères dans l'historique des commits de votre dépôt.
+24. `git remote` : utilisée pour gérer les dépôts distants associés à votre dépôt local.
+25. `git submodule` : utilisée pour gérer des sous-modules dans votre dépôt, c'est-à-dire des références à d'autres dépôts Git inclus dans votre projet.
+26. `git rev-parse` : utilisée pour extraire des informations sur les objets Git, comme les commits et les branches.
+27. `git bisect` : utilisée pour effectuer une recherche binaire dans l'historique des commits de votre dépôt pour trouver un commit spécifique.
+28. `git mv` : utilisée pour déplacer ou renommer des fichiers dans votre dépôt.
+29. `git filter-branch` : utilisée pour appliquer des filtres sur l'historique des commits de votre dépôt, comme la suppression de fichiers ou la modification de l'auteur d'un commit.
+30. `git archive` : utilisée pour créer un archive des fichiers de votre dépôt, dans un format spécifié (par exemple, ZIP ou tar).
+31. `git am` : utilisée pour appliquer des patchs envoyés par courrier électronique à votre dépôt.
+32. `git cherry` : utilisée pour afficher et appliquer les commits qui ne sont pas encore présents dans une autre branche.
+33. `git instaweb` : utilisée pour lancer un serveur web local qui affiche votre dépôt Git en utilisant gitweb.
+34. `git subtree` : utilisée pour gérer les sous-arbres (sous-ensembles de répertoires) dans votre dépôt.
+35. `git merge-base` : utilisée pour trouver le commit commun le plus récent entre deux branches.
+36. `git pack-refs` : utilisée pour empaqueter les références (branches et tags) dans votre dépôt.
+37. `git prune` : utilisée pour supprimer les références orphelines (non pointées par aucune branche) dans votre dépôt.
+38. `git reflog` : utilisée pour afficher l'historique des références (branches et tags) de votre dépôt.
+39. `git request-pull` : utilisée pour générer un message de demande de fusion de changements provenant d'une branche de votre dépôt vers un autre dépôt.
+40. `git worktree` : utilisée pour gérer des arbres de travail (copies de votre dépôt) sur votre ordinateur.
+
 ## Add et commit
 
 Pour ajouter des fichiers à l'index (staging area)
