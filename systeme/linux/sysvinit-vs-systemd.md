@@ -10,3 +10,75 @@ Voici quelques différences clés entre sysvinit et systemd :
 4. Vitesse de démarrage : systemd est généralement considéré comme plus rapide que sysvinit pour démarrer le système, en raison de son architecture en arbre et de sa gestion parallèle des processus.
 
 Il est important de noter que sysvinit est encore largement utilisé sur de nombreux systèmes Linux, mais que systemd est de plus en plus populaire et est devenue la norme de facto sur de nombreuses distributions récentes.
+
+## Exemple de démarrage d'un programme java avec systemd :&#x20;
+
+Voici comment démarrer un programme Java en utilisant systemd sur un système Linux :
+
+Tout d'abord, vous devez créer une unité de service pour votre programme Java. Une unité de service est un fichier de configuration qui décrit comment votre programme doit être géré par systemd. Vous pouvez utiliser l'outil "systemctl" pour créer une unité de service à partir d'un fichier de configuration :
+
+```bash
+systemctl create --force --description="My Java program" --user myprogram.service
+```
+
+Cela créera une unité de service nommée "myprogram.service" pour votre programme, avec une description "My Java program" et qui sera exécuté en tant qu'utilisateur.
+
+Ensuite, vous devez ajouter le contenu de votre unité de service dans le fichier "myprogram.service" qui vient d'être créé. Voici un exemple de contenu pour une unité de service qui démarre un programme Java nommé "MyProgram" :
+
+```bash
+[Unit]
+Description=My Java program
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/java -jar /path/to/MyProgram.jar
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Notez que vous devez spécifier le chemin complet vers l'exécutable Java et vers votre programme Java dans la ligne "ExecStart".
+
+Enfin, vous pouvez utiliser "systemctl" pour démarrer votre programme Java :
+
+```bash
+systemctl start myprogram.service
+```
+
+Cela démarrera votre programme Java et le rendra disponible pour être utilisé. Vous pouvez également utiliser "systemctl" pour arrêter, redémarrer ou afficher l'état de votre programme.
+
+Voici quelques exemples de commandes utiles :
+
+* Pour arrêter le programme :
+
+```bash
+systemctl stop myprogram.service
+```
+
+* Pour redémarrer le programme :
+
+```bash
+systemctl restart myprogram.service
+```
+
+* Pour afficher l'état du programme :
+
+```bash
+systemctl status myprogram.service
+```
+
+Pour afficher les journaux du service Java en temps réel, vous pouvez utiliser la commande "journalctl" avec l'option "-f" et le nom de votre service, comme ceci :
+
+```bash
+journalctl -f myprogram.service
+```
+
+Cela affichera les journaux du service Java en temps réel, en ajoutant de nouvelles lignes au fur et à mesure qu'elles sont écrites dans les journaux.
+
+Si vous voulez afficher les journaux du service Java à un moment donné, vous pouvez utiliser la commande "journalctl" sans l'option "-f" et en précisant une plage de temps, comme ceci :
+
+```bash
+journalctl --since "2022-12-01 00:00:00" --until "2022-12-02 00:00:00" myprogram.service
+```
+
+Cela affichera les journaux du service Java pour la période allant du 1er décembre 2022 à minuit jusqu'au 2 décembre 2022 à minuit.
