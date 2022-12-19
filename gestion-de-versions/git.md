@@ -97,3 +97,9 @@ git push origin nouvelle_branche
 Cette commande enverra la nouvelle branche au dépôt distant, où elle pourra être visualisée et fusionnée par d'autres personnes travaillant sur le projet.
 
 Notez que vous devrez peut-être utiliser la commande `git push --set-upstream origin nouvelle_branche` la première fois que vous envoyez la branche, afin de définir le dépôt distant comme destination pour les futurs envois de cette branche.
+
+Pour forcer et remplacer les modifications sur une branche du dépôt distant par les modifications locales :
+
+```shell
+git push --force origin ma_branche
+```
