@@ -32,7 +32,7 @@ Pour visualiser le contenu d'un stash dans Git, vous pouvez utiliser la commande
 
 Si vous souhaitez afficher les différences pour tous les fichiers, y compris les fichiers ajoutés et supprimés, vous pouvez utiliser l'option `-p` :
 
-```bash
+```shell
 git stash show -p
 ```
 {% endtab %}
@@ -40,25 +40,25 @@ git stash show -p
 {% tab title="Avec un nom" %}
 Vous pouvez donner un nom à un stash en utilisant la commande git stash save avec l'option --include-untracked. Cette option inclut également les fichiers non suivis (untracked) dans le stash, ce qui vous permet de les enregistrer dans votre dépôt Git plus tard, Voici un exemple :
 
-```bash
+```shell
 git stash save --include-untracked "Nom du stash"
 ```
 
 Vous pouvez également utiliser la commande `git stash save` sans l'option `--include-untracked` pour ne mettre en attente (stash) que les modifications apportées aux fichiers suivis (tracked) :
 
-```bash
+```shell
 git stash save "Nom du stash"
 ```
 
 Pour réappliquer un stash nommé :
 
-```bash
+```shell
 git stash apply stash@{Nom du stash} --index
 ```
 
 Pour visualiser le contenu d'un stash :&#x20;
 
-```bash
+```shell
 git stash show stash@{Nom du stash}
 ```
 {% endtab %}
