@@ -49,19 +49,19 @@ Cela démarrera votre programme Java et le rendra disponible pour être utilisé
 
 Voici quelques exemples de commandes utiles :
 
-* Pour arrêter le programme :
+Pour arrêter le programme :
 
 ```bash
 systemctl stop myprogram.service
 ```
 
-* Pour redémarrer le programme :
+Pour redémarrer le programme :
 
 ```bash
 systemctl restart myprogram.service
 ```
 
-* Pour afficher l'état du programme :
+Pour afficher l'état du programme :
 
 ```bash
 systemctl status myprogram.service
