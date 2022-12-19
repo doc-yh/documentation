@@ -64,3 +64,24 @@ git stash show stash@{Nom du stash}
 {% endtab %}
 {% endtabs %}
 
+## Branch et checkout
+
+Pour créer une nouvelle branche dans Git, vous pouvez utiliser la commande `git branch`. Cette commande vous permet de créer une nouvelle branche à partir de votre position actuelle dans le dépôt.
+
+Voici un exemple de syntaxe de la commande `git branch` pour créer une nouvelle branche appelée "nom-de-la-branche" :
+
+```shell
+git branch nom-de-la-branche
+```
+
+Cette commande crée une nouvelle branche appelée "nom-de-la-branche", mais ne bascule pas sur cette branche. Pour basculer sur la nouvelle branche, vous devez utiliser la commande `git checkout` :
+
+```shell
+git checkout nom-de-la-branche
+```
+
+Vous pouvez également créer une nouvelle branche et basculer dessus en une seule commande en utilisant la commande `git checkout -b` :
+
+```shell
+git checkout -b nom-de-la-branche
+```
