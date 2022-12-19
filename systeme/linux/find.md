@@ -4,31 +4,31 @@ Voici quelques exemples d'utilisation de la commande `find` :
 
 Rechercher tous les fichiers de type `.txt` dans le répertoire courant et sous-répertoires :
 
-```lua
+```shell
 $ find . -name "*.txt"
 ```
 
 Rechercher tous les fichiers modifiés il y a moins de deux jours :
 
-```lua
+```shell
 $ find . -mtime -2
 ```
 
 Rechercher tous les fichiers appartenant à l'utilisateur `john` :
 
-```lua
+```shell
 $ find . -user john
 ```
 
 Rechercher tous les fichiers ayant les permissions `644` :
 
-```lua
+```shell
 $ find . -perm 644
 ```
 
 Rechercher tous les fichiers vides :
 
-```lua
+```shell
 $ find . -empty
 ```
 
@@ -40,7 +40,7 @@ $ find . -name "doc*" -exec cp {} /backup \;
 
 Rechercher tous les fichiers de type `.pdf` dans le répertoire courant et sous-répertoires et les supprimer :
 
-```javascript
+```shell
 $ find . -name "*.pdf" -delete
 ```
 
@@ -100,30 +100,30 @@ $ find . -empty -ok rm {} \;
 
 Rechercher tous les fichiers dont le nom commence par une lettre majuscule et se termine par `.txt` :
 
-```lua
+```shell
 $ find . -regex ".*/[A-Z].*\.txt"
 ```
 
 Rechercher tous les fichiers dont le nom contient un nombre entier compris entre 10 et 99 :
 
-```css
+```shell
 $ find . -regex ".*/[0-9][0-9]$"
 ```
 
 Rechercher tous les fichiers dont le nom contient une chaîne de caractères alphanumérique de 8 caractères :
 
-```lua
+```shell
 $ find . -regex ".*/[a-zA-Z0-9]{8}"
 ```
 
 Rechercher tous les fichiers dont le nom commence par `file_` suivi de 3 chiffres et d'une lettre majuscule :
 
-```css
+```shell
 $ find . -regex ".*/file_[0-9]{3}[A-Z]"
 ```
 
 Rechercher tous les fichiers dont le nom contient une chaîne de caractères alphabétique de 3 à 5 caractères, suivie de `.txt` :
 
-```lua
+```shell
 $ find . -regex ".*/[a-zA-Z]{3,5}\.txt"
 ```
