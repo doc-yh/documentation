@@ -2,6 +2,7 @@
 
 * [Système](README.md)
   * [Linux](systeme/linux/README.md)
+    * [xargs](systeme/linux/xargs.md)
     * [Systemd vs SysvInit](systeme/linux/systemd-vs-sysvinit.md)
     * [Gérer les groupes sous Linux](systeme/linux/gerer-les-groupes-sous-linux.md)
     * [SUID (Set User ID)](systeme/linux/suid-set-user-id.md)
