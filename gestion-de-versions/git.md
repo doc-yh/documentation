@@ -120,7 +120,7 @@ Lorsqu'un "rebase" échoue en raison de conflits, Git arrête le processus et vo
 
 Voici comment procéder :
 
-1. Ouvrez les fichiers contenant des conflits et cherchez les sections de code entourées de marqueurs de conflit, comme ceci :
+Ouvrez les fichiers contenant des conflits et cherchez les sections de code entourées de marqueurs de conflit, comme ceci :
 
 ```shell
 <<<<<<< HEAD
