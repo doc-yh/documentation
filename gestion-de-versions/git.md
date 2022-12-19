@@ -233,3 +233,20 @@ $ git rebase master
 ```
 
 Cela va appliquer les commits de la feature branch sur le dessus des commits du master, en les "rejouant" l'un après l'autre. Si des conflits surviennent pendant le rebase, vous devrez les résoudre avant de pouvoir continuer.
+
+## Merge d'une branch vers le master
+
+Pour merger une feature branch vers le master, vous devez d'abord vous assurer que vous êtes sur la branche master et que vous avez récupéré les dernières mises à jour du dépôt distant. Pour ce faire, utilisez les commandes suivantes :
+
+```shell
+$ git checkout master
+$ git pull origin master
+```
+
+Une fois que vous êtes sur la branche master et que vous avez récupéré les dernières mises à jour, vous pouvez merger la feature branch en utilisant la commande `git merge`. Par exemple :
+
+```shell
+$ git merge feature-branch
+```
+
+Cela va fusionner les commits de la feature branch dans le master, en créant un nouveau commit de fusion qui regroupe les modifications apportées dans les deux branches. Si des conflits surviennent pendant le merge, vous devrez les résoudre avant de pouvoir continuer.
