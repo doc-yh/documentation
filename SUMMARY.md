@@ -8,7 +8,7 @@
     * [Gestion des processus sur Linux](systeme/linux/gestion-des-processus-sur-linux.md)
     * [Informations système](systeme/linux/informations-systeme.md)
     * [Manipuler les logs](systeme/linux/commandes-utilisees-pour-manipuler-les-logs.md)
-    * [Chmod](systeme/linux/chmod.md)
+    * [Droits d'accès](systeme/linux/droits-dacces.md)
     * [Disk usage (du)](systeme/linux/disk-usage-du.md)
     * [Stocker le résultat d'une commande](systeme/linux/stocker-le-resultat-dune-commande.md)
     * [Lister les ports utilisés](systeme/linux/lister-les-ports-utilises.md)
