@@ -4,13 +4,13 @@
 
 Pour ajouter des fichiers à l'index (staging area)
 
-```bash
+```shell
 git add filename.txt
 ```
 
 Une fois que vous avez ajouté des fichiers à l'index, vous pouvez utiliser la commande suivante pour enregistrer ces changements dans l'historique de votre dépôt Git.
 
-```sql
+```shell
 git commit -m "Ajout de nouveaux fichiers à l'index"
 ```
 
