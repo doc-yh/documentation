@@ -67,7 +67,7 @@ systemctl restart myprogram.service
 systemctl status myprogram.service
 ```
 
-#### Pour afficher les journaux du service Java en temps réel :
+#### Pour afficher les journaux du service en temps réel :
 
 ```bash
 journalctl -f myprogram.service
@@ -75,7 +75,7 @@ journalctl -f myprogram.service
 
 Cela affichera les journaux du service Java en temps réel, en ajoutant de nouvelles lignes au fur et à mesure qu'elles sont écrites dans les journaux.
 
-#### Afficher les journaux du service Java à un moment donné :
+#### Afficher les journaux du service à un moment donné :
 
 ```bash
 journalctl --since "2022-12-01 00:00:00" --until "2022-12-02 00:00:00" myprogram.service
