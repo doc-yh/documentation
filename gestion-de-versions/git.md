@@ -103,3 +103,51 @@ Pour forcer et remplacer les modifications sur une branche du dépôt distant pa
 ```shell
 git push --force origin ma_branche
 ```
+
+## Pull + Rebase&#x20;
+
+Le "pull" est une opération qui permet de récupérer les modifications du dépôt distant et de les fusionner dans votre branche locale. Le "rebase" est une opération qui consiste à réappliquer vos propres commits sur les dernières modifications de la branche.
+
+Pour faire un "pull" avec un "rebase" :
+
+```shell
+git pull --rebase origin ma_branche
+```
+
+Cette commande récupèrera les modifications de la branche `ma_branche` sur le dépôt distant, puis les réappliquera sur votre branche locale en utilisant un "rebase". Cela permettra de fusionner les modifications du dépôt distant avec votre branche de manière à ce qu'il n'y ait pas de commits de fusion inutiles dans l'historique.
+
+Lorsqu'un "rebase" échoue en raison de conflits, Git arrête le processus et vous indique où se situent les conflits dans les fichiers en question. Vous devrez alors résoudre ces conflits avant de pouvoir continuer le "rebase".
+
+Voici comment procéder :
+
+1. Ouvrez les fichiers contenant des conflits et cherchez les sections de code entourées de marqueurs de conflit, comme ceci :
+
+```shell
+<<<<<<< HEAD
+Code sur votre branche
+=======
+Code sur la branche distante
+>>>>>>> nouvelle_branche
+```
+
+1. Décidez de la version du code à conserver et supprimez les marqueurs de conflit ainsi que la version du code que vous ne voulez pas garder.
+2. Enregistrez et fermez les fichiers une fois que vous avez résolu tous les conflits.
+3. Utilisez la commande `git add` pour marquer les fichiers modifiés comme étant prêts à être commités :
+
+```shell
+git add fichier1 fichier2
+```
+
+Continuez le "rebase" en utilisant la commande `git rebase --continue`.
+
+Git continuera alors le "rebase" et appliquera les commits restants sur les modifications du dépôt distant. Si d'autres conflits surgissent, le processus s'arrêtera de nouveau et vous devrez résoudre ces conflits avant de pouvoir continuer.
+
+Pour afficher la liste des fichiers en conflit lors d'un "rebase", vous pouvez utiliser la commande `git diff` avec l'option `--name-only`. Par exemple :
+
+```shell
+git diff --name-only --diff-filter=U
+```
+
+Cette commande affichera la liste des fichiers qui ont des conflits non résolus.
+
+Vous pouvez également utiliser la commande `git status` pour afficher la liste des fichiers en conflit. Le résultat inclura une section intitulée "Unmerged paths" qui liste les fichiers en conflit.
