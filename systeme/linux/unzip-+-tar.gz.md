@@ -4,27 +4,27 @@
 
 ### Zip
 
-Pour compresser un fichier en zip :&#x20;
+Pour compresser un fichier :&#x20;
 
 ```shell
 zip nom_du_fichier_compressé.zip nom_du_fichier
 ```
 
-Pour compresser un dossier en zip :
+Pour compresser un dossier :
 
 ```shell
-zip -r /chemin/vers/le/répertoire/de/destination/nom_du_fichier_compressé.zip nom_du_dossier
+zip -r nom_du_fichier_compressé.zip nom_du_dossier
 ```
 
 ### Tar.gz
 
-Pour compresser un fichier dans un fichier ".tar.gz" :
+Pour compresser un fichier :
 
 ```shell
 tar -czvf nom_du_fichier.tar.gz nom_du_fichier
 ```
 
-Pour compresser un dossier dans un fichier ".tar.gz" :
+Pour compresser un dossier :
 
 ```shell
 tar -czvf nom_du_fichier.tar.gz nom_du_dossier
@@ -35,7 +35,7 @@ tar -czvf nom_du_fichier.tar.gz nom_du_dossier
 ### Zip
 
 ```shell
-unzip /chemin/vers/le/fichier/nom_du_fichier.zip -d /chemin/vers/le/répertoire/de/destination
+unzip nom_du_fichier.zip -d /chemin/vers/le/répertoire/de/destination
 ```
 
 ### Tar.gz
