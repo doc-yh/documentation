@@ -2,6 +2,7 @@
 
 * [Système](README.md)
   * [Linux](systeme/linux/README.md)
+    * [SUID (Set User ID)](systeme/linux/suid-set-user-id.md)
     * [Gestion des processus sur Linux](systeme/linux/gestion-des-processus-sur-linux.md)
     * [Informations système](systeme/linux/informations-systeme.md)
     * [Commandes utilisées pour manipuler les logs](systeme/linux/commandes-utilisees-pour-manipuler-les-logs.md)
