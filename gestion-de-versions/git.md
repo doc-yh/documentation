@@ -193,3 +193,12 @@ git rebase -i <identifiant_commit>
 2. Git vous demandera de modifier le message du commit fusionné. Modifiez le message selon vos besoins, enregistrez et quittez l'interface.
 
 Le "rebase" continuera alors et fusionnera les commits sélectionnés en un seul commit.
+
+## Cherry pick
+
+Voici comment vous pouvez effectuer un cherrypick pour récupérer un commit de la branche `branche_2` et l'appliquer à la branche `master` :
+
+1. Basculez sur la branche `branche_2` en utilisant la commande `git checkout branche_2`.
+2. Trouvez le hash du commit que vous souhaitez récupérer en utilisant la commande `git log`. Prenez note du hash du commit.
+3. Basculez sur la branche `master` en utilisant la commande `git checkout master`.
+4. Utilisez la commande `git cherry-pick <hash du commit>` pour récupérer le commit et l'appliquer à la branche `master`. Si vous rencontrez des conflits, vous devrez les résoudre avant de pouvoir poursuivre.
