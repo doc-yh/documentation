@@ -104,7 +104,7 @@ Pour forcer et remplacer les modifications sur une branche du dépôt distant pa
 git push --force origin ma_branche
 ```
 
-## Pull + Rebase&#x20;
+## Pull avec un Rebase&#x20;
 
 Le "pull" est une opération qui permet de récupérer les modifications du dépôt distant et de les fusionner dans votre branche locale. Le "rebase" est une opération qui consiste à réappliquer vos propres commits sur les dernières modifications de la branche.
 
@@ -157,3 +157,28 @@ Vous pouvez également utiliser la commande `git status` pour afficher la liste 
 ### Annuler un rebase
 
 Il est possible d'annuler un "rebase" en cours en utilisant la commande `git rebase --abort`. Cette commande annulera le "rebase" en cours et vous ramènera à l'état de votre branche avant le début du "rebase".
+
+## Squash
+
+Le "squash" est une opération qui permet de fusionner plusieurs commits en un seul. Cela peut être utile lorsque vous avez effectué plusieurs commits de petites modifications et que vous souhaitez les regrouper en un seul commit plus significatif.
+
+Voici comment procéder :
+
+1. Assurez-vous que vous êtes sur la branche contenant les commits à "squasher".
+2. Utilisez la commande `git log` pour afficher l'historique des commits de la branche :
+
+```bash
+git log
+```
+
+1. Repérez le commit juste avant celui que vous voulez "squasher" et copiez son identifiant (un long nombre hexadécimal).
+2. Utilisez la commande `git rebase -i` suivi de l'identifiant du commit copié à l'étape précédente pour lancer l'interface interactive de "rebase" :
+
+```shell
+git rebase -i <identifiant_commit>
+```
+
+1. Dans l'interface interactive, remplacez "pick" par "squash" pour chaque commit que vous voulez "squasher". Enregistrez et quittez l'interface.
+2. Git vous demandera de modifier le message du commit fusionné. Modifiez le message selon vos besoins, enregistrez et quittez l'interface.
+
+Le "rebase" continuera alors et fusionnera les commits sélectionnés en un seul commit.
