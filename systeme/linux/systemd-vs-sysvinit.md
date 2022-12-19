@@ -1,6 +1,6 @@
 # Systemd vs SysvInit
 
-sysvinit et systemd sont deux gestionnaires de démarrage utilisés sur les systèmes d'exploitation basés sur Unix, tels que Linux. Ils sont responsables de lancer les processus et les services nécessaires au démarrage et au fonctionnement du système.
+Systemd et SysvInit sont deux gestionnaires de démarrage utilisés sur les systèmes d'exploitation basés sur Unix, tels que Linux. Ils sont responsables de lancer les processus et les services nécessaires au démarrage et au fonctionnement du système.
 
 Voici quelques différences clés entre sysvinit et systemd :
 
