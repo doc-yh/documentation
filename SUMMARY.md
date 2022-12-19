@@ -2,7 +2,6 @@
 
 * [Système](README.md)
   * [Linux](systeme/linux/README.md)
-    * [Liens utiles](systeme/linux/liens-utiles.md)
     * [Systemd vs SysvInit](systeme/linux/systemd-vs-sysvinit.md)
     * [Gérer les groupes sous Linux](systeme/linux/gerer-les-groupes-sous-linux.md)
     * [SUID (Set User ID)](systeme/linux/suid-set-user-id.md)
@@ -17,3 +16,4 @@
     * [Stocker le résultat d'une commande](systeme/linux/stocker-le-resultat-dune-commande.md)
     * [Lister les ports utilisés](systeme/linux/lister-les-ports-utilises.md)
     * [Cron job](systeme/linux/cron-job.md)
+    * [Liens utiles](systeme/linux/liens-utiles.md)
