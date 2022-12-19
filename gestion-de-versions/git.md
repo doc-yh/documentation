@@ -164,9 +164,6 @@ Le "squash" est une opération qui permet de fusionner plusieurs commits en un s
 
 Voici comment procéder :
 
-1. Assurez-vous que vous êtes sur la branche contenant les commits à "squasher".
-2. Utilisez la commande `git log` pour afficher l'historique des commits de la branche :
-
 ```bash
 git log
 ```
@@ -178,7 +175,21 @@ git log
 git rebase -i <identifiant_commit>
 ```
 
-1. Dans l'interface interactive, remplacez "pick" par "squash" pour chaque commit que vous voulez "squasher". Enregistrez et quittez l'interface.
+1.  Dans l'interface interactive, remplacez "pick" par "squash" pour chaque commit que vous voulez "squasher". Enregistrez et quittez l'interface.
+
+    a - Vous devriez voir quelque chose comme ceci dans votre éditeur de texte :
+
+    ```
+    pick 9caf27b commit_1
+    pick 47aeebb commit_2
+    ```
+
+    b - Modifiez la liste comme suit :
+
+    ```
+    pick 9caf27b commit_1
+    squash 47aeebb commit_2
+    ```
 2. Git vous demandera de modifier le message du commit fusionné. Modifiez le message selon vos besoins, enregistrez et quittez l'interface.
 
 Le "rebase" continuera alors et fusionnera les commits sélectionnés en un seul commit.
