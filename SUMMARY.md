@@ -7,7 +7,7 @@
     * [SUID (Set User ID)](systeme/linux/suid-set-user-id.md)
     * [Gestion des processus sur Linux](systeme/linux/gestion-des-processus-sur-linux.md)
     * [Informations système](systeme/linux/informations-systeme.md)
-    * [Commandes utilisées pour manipuler les logs](systeme/linux/commandes-utilisees-pour-manipuler-les-logs.md)
+    * [Manipuler les logs](systeme/linux/manipuler-les-logs.md)
     * [Grep](systeme/linux/grep.md)
     * [Awk](systeme/linux/awk.md)
     * [Tail](systeme/linux/tail.md)
