@@ -1,4 +1,4 @@
-# xargs
+# Xargs
 
 `xargs` est un outil en ligne de commande qui permet de construire et d'exécuter des commandes en utilisant les entrées standard. Il prend une liste de chaînes de caractères en entrée et exécute une commande spécifiée en remplaçant chaque occurrence de `{}` par chaque chaîne de la liste.
 
