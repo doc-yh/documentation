@@ -54,16 +54,20 @@ Lister les réseaux d'un container
 docker inspect my-container | jq -r '.[0].NetworkSettings.Networks | keys[]'
 ```
 
-Créer un réseau sur Docker
+Créer un réseau (`--driver bridge` permet de créer un réseau en mode "pont" : ce qui permet à différents conteneurs de communiquer entre eux)
 
 ```shell
 docker network create --driver bridge my-network
 ```
 
-L'argument `--driver bridge` permet de créer un réseau en mode "pont" (ce qui permet à différents conteneurs de communiquer entre eux)
+Attacher un réseau à un container
 
-Une fois que le réseau a été créé, vous pouvez l'utiliser comme ceci :
+```shell
+docker network connect my-network my-container
+```
 
-```perl
-docker run --network my-network my-image
+Détacher un conteneur d'un réseau
+
+```shell
+docker network disconnect my-network my-container
 ```
