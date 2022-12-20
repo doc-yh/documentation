@@ -1,4 +1,4 @@
-# Gestion des processus
+# Gestion des processus sur Linux
 
 #### Lister les processus en cours d'execution
 

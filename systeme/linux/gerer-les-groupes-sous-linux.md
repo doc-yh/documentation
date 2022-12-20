@@ -1,4 +1,4 @@
-# Gérer les groupes
+# Gérer les groupes sous Linux
 
 Il existe plusieurs façons de gérer les groupes sous Linux. Voici quelques exemples :
 
