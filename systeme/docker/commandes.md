@@ -31,7 +31,14 @@ Cela créera une image Docker nommée `my_image` avec l'étiquette `latest` à p
 docker push my_username/my_image:latest
 ```
 
-##
+## Lister les images
 
+```shell
+docker images
+```
 
+## Supprimer une image
 
+```shell
+docker rmi my_image
+```
