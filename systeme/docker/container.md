@@ -1,10 +1,4 @@
-# Commandes
-
-## Télécharger une image depuis un dépôt Docker
-
-```shell
-docker pull my-image
-```
+# Container
 
 ## Démarrer et se connecter à un container
 
@@ -42,5 +36,8 @@ docker rm my-container
 docker rm -v my-container
 ```
 
+## Afficher les logs d'un conteneur
 
-
+```shell
+docker logs -f my_container
+```
