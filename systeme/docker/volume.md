@@ -29,6 +29,12 @@ Il est important de choisir le type de stockage approprié en fonction de vos be
 docker volume rm my-volume
 ```
 
+## Supprimer tous les volumes
+
+```shell
+docker volume prune
+```
+
 ## Lister tous les volumes
 
 ```shell
