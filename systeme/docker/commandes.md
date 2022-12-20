@@ -6,7 +6,13 @@
 docker pull my-image
 ```
 
-## Démarrer un container à partir d'une image en mode deamon
+## Démarrer et se connecter à un container
+
+```shell
+docker run -it --name my-container my-image
+```
+
+## Démarrer un container en mode deamon
 
 ```shell
 docker run -d --name my-container my-image

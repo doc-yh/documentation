@@ -3,18 +3,16 @@
 ## Créer un volume
 
 ```shell
-docker volume create -o type=none -o device=/chemin/vers/mon/répertoire mon_volume
+docker volume create --opt type=none --opt device=/mnt/c/docker/ --opt o=bind my_volume
 ```
 
-Cela créera un volume qui utilise le répertoire `/chemin/vers/mon/répertoire` sur votre hôte comme stockage de données.
+Cela créera un volume qui utilise le répertoire /mnt/c/docker/ sur votre hôte comme stockage de données.
 
 Vous pouvez également utiliser la commande `docker run` avec l'option `-v` pour créer un volume et l'attacher à un conteneur en même temps. Par exemple:
 
 ```shell
-docker run -d --name mon_conteneur -v mon_volume:/mon/répertoire_de_données image_du_conteneur
+docker run -v my_volume:/container_folder -it my_image
 ```
-
-Cela créera un conteneur nommé `mon_conteneur` à partir de l'image `image_du_conteneur`, en attachant le volume `mon_volume` au répertoire `/mon/répertoire_de_données` dans le conteneur. Si le volume `mon_volume` n'existe pas encore, il sera créé automatiquement.
 
 L'option `type` de la commande `docker volume create` vous permet de spécifier le type de stockage à utiliser pour le volume que vous créez. Les différents types disponibles sont les suivants:
 
