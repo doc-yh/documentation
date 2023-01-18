@@ -29,4 +29,5 @@
 * [Gestion de versions](gestion-de-versions/README.md)
   * [Git](gestion-de-versions/git.md)
 * [Database](database/README.md)
+  * [Spring Transaction (REQUIRED vs REQUIRED\_NEW)](database/spring-transaction-required-vs-required\_new.md)
   * [HikariCP](database/hikaricp.md)
