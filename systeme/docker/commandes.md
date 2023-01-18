@@ -1,73 +1,44 @@
-# Commandes
+# Image
 
-Télécharger une image depuis un dépôt Docker
+## Télécharger une image depuis un dépôt Docker
 
 ```shell
 docker pull my-image
 ```
 
-Démarrer un container à partir d'une image en mode deamon
+## Exemple de publication d'image sur Docker Hub
 
-```shell
-docker run -d --name my-container my-image
+Créez un fichier nommé `Dockerfile` avec le contenu suivant :
+
+```css
+FROM ubuntu:18.04
+
+CMD ["echo", "Hello, world!"]
 ```
 
-Se connecter et ouvrir un shell dans un container en mode interactif
-
-```shell
-docker exec -it my-container /bin/sh
-```
-
-Stopper un container
-
-```shell
-docker stop my-container
-```
-
-Supprimer un container
-
-```shell
-docker rm my-container
-```
-
-Supprimer le container et son volume
-
-```shell
-docker rm -v my-container
-```
-
-Supprimer un volume
+Exécutez la commande suivante pour créer une image :
 
 ```bash
-docker volume rm my-volume
+docker build -t my_username/my_image:latest .
 ```
 
-Lister les volumes d'un container
+Cela créera une image Docker nommée `my_image` avec l'étiquette `latest` à partir de votre fichier Dockerfile.
 
-```shell
-docker inspect my-container | jq -r '.[0].Mounts[]'
+1. Authentifiez-vous sur votre compte Docker Hub avec la commande `docker login`. Spécifiez votre nom d'utilisateur et votre mot de passe Docker Hub.
+2. Publiez votre image Docker sur Docker Hub en utilisant la commande `docker push`. Spécifiez le nom de votre image Docker et le nom de votre référentiel Docker Hub. Par exemple:
+
+```bash
+docker push my_username/my_image:latest
 ```
 
-Lister les réseaux d'un container
+## Lister les images
 
 ```shell
-docker inspect my-container | jq -r '.[0].NetworkSettings.Networks | keys[]'
+docker images
 ```
 
-Créer un réseau (`--driver bridge` permet de créer un réseau en mode "pont" : ce qui permet à différents conteneurs de communiquer entre eux)
+## Supprimer une image
 
 ```shell
-docker network create --driver bridge my-network
-```
-
-Attacher un réseau à un container
-
-```shell
-docker network connect my-network my-container
-```
-
-Détacher un conteneur d'un réseau
-
-```shell
-docker network disconnect my-network my-container
+docker rmi my_image
 ```
