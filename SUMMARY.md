@@ -30,6 +30,7 @@
   * [Git](gestion-de-versions/git.md)
 * [Database](database/README.md)
   * [Spring](database/spring/README.md)
+    * [Read-write and read-only transaction routing](database/spring/read-write-and-read-only-transaction-routing.md)
     * [@Transactional](database/spring/transactional/README.md)
       * [REQUIRED et REQUIRED\_NEW](database/spring/transactional/required-et-required\_new.md)
       * [Auto-commit](database/spring/transactional/auto-commit.md)
