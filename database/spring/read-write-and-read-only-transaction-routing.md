@@ -15,50 +15,42 @@ public enum DataSourceType {
 @Configuration
 public class MultiDataSourceConfiguration {
 
-    @Value("${datasource.driverClassName}")
-    private String driverClassName;
+    @Value("${datasource.readWrite.url}")
+    private String urlReadWrite;
 
-    @Value("${datasource.url}")
-    private String url;
+    @Value("${datasource.readWrite.username}")
+    private String usernameReadWrite;
 
-    @Value("${datasource.username}")
-    private String username;
+    @Value("${datasource.readWrite.password}")
+    private String passwordReadWrite;
 
-    @Value("${datasource.password}")
-    private String password;
-
+    @Value("${datasource.readOnly.url}")
+    private String urlReadOnly;
+    
     @Value("${datasource.username.readOnly}")
     private String usernameReadOnly;
 
     @Value("${datasource.password.readOnly}")
     private String passwordReadOnly;
 
-    @Value("${datasource.hikari.maximumPoolSize}")
-    private int hikariMaximumPoolSize;
-
     @Bean
     public TransactionRoutingDataSource dataSource() {
         TransactionRoutingDataSource routingDataSource = new TransactionRoutingDataSource();
         routingDataSource.setTargetDataSources(Map.of(
-                DataSourceType.READ_WRITE, hikariDataSource(DataSourceBuilder.create()
-                        .driverClassName(driverClassName)
-                        .url(url)
-                        .username(username)
-                        .password(password)
-                        .build()),
-                DataSourceType.READ_ONLY, hikariDataSource(DataSourceBuilder.create()
-                        .driverClassName(driverClassName)
-                        .url(url)
-                        .username(usernameReadOnly)
-                        .password(passwordReadOnly)
-                        .build())
+                DataSourceType.READ_WRITE, hikariDataSource(urlReadWrite, usernameReadWrite, passwordReadWrite),
+                DataSourceType.READ_ONLY, hikariDataSource(urlReadOnly, usernameReadOnly, passwordReadOnly)
         ));
         return routingDataSource;
     }
 
-    protected HikariDataSource hikariDataSource(DataSource dataSource) {
+    protected HikariDataSource hikariDataSource(String url, String username, String password) {
+        PGSimpleDataSource dataSource = new PGSimpleDataSource();
+        dataSource.setURL(url);
+        dataSource.setUser(username);
+        dataSource.setPassword(password);
         HikariConfig hikariConfig = new HikariConfig();
-        hikariConfig.setMaximumPoolSize(hikariMaximumPoolSize);
+        int cpuCores = Runtime.getRuntime().availableProcessors();
+        hikariConfig.setMaximumPoolSize(cpuCores * 4);
         hikariConfig.setDataSource(dataSource);
         return new HikariDataSource(hikariConfig);
     }
