@@ -1,5 +1,7 @@
 # WSL / Ubuntu
 
+## Activer Systemd
+
 Pour activer systemd, ouvrez votre fichier wsl.conf dans un éditeur de texte en utilisant sudo pour les droits d'administrateur et ajoutez ces lignes au fichier `/etc/wsl.conf` :
 
 ```shell
@@ -9,7 +11,7 @@ systemd=true
 
 Vous devrez ensuite fermer votre distribution WSL en utilisant `wsl.exe --shutdown` depuis PowerShell pour redémarrer vos instances WSL. Une fois votre distribution redémarrée, systemd devrait être en cours d'exécution. Vous pouvez le confirmer en utilisant la commande : `systemctl list-unit-files --type=service`, qui affichera le statut de vos services.
 
-**Installer Docker + Compose**
+## **Installer Docker + Compose**
 
 ```shell
 # Install Docker, you can ignore the warning from Docker about using WSL
@@ -31,5 +33,7 @@ docker compose version
 sudo update-alternatives --config iptables
 ```
 
-Redémarrer ubuntu
+## Pour tout supprimer
+
+En cas de problème : désintaller ubuntu depuis le store + `wsl --unregister Ubuntu` depuis le terminal windows
 
