@@ -1,4 +1,4 @@
-# WSL / Ubuntu
+# WSL (Ubuntu + Docker)
 
 ## **Installer Docker + Compose**
 
