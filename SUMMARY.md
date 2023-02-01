@@ -30,6 +30,8 @@
 * [Gestion de versions](gestion-de-versions/README.md)
   * [Git](gestion-de-versions/git.md)
 * [Database](database/README.md)
+  * [Postgres](database/postgres/README.md)
+    * [ID personnalisé généré à partir d'un trigger](database/postgres/id-personnalise-genere-a-partir-dun-trigger.md)
   * [Spring](database/spring/README.md)
     * [Read-write and read-only transaction routing](database/spring/read-write-and-read-only-transaction-routing.md)
     * [@Transactional](database/spring/transactional/README.md)
