@@ -2,21 +2,20 @@
 
 Fonction trigger qui se déclenche au moment de l'insertion
 
-```sql
-create sequence if not exists DATA.SEQ;
+<pre class="language-sql"><code class="lang-sql">create sequence if not exists DATA.SEQ;
 
-CREATE OR REPLACE FUNCTION DATA.next_val() RETURNS trigger AS $next_val$
+CREATE OR REPLACE FUNCTION DATA.next_val() RETURNS trigger AS $$
         BEGIN
             NEW.av_id_piamp := nextval('DATA.SEQ');
     	    RETURN NEW;
 	END;
-$next_val$ LANGUAGE plpgsql;
-
+<strong>$$ LANGUAGE plpgsql;
+</strong>
 CREATE OR REPLACE TRIGGER next_val
   BEFORE INSERT ON DATA.AVIS
   FOR EACH ROW
   EXECUTE FUNCTION DATA.next_val();
-```
+</code></pre>
 
 Exemple d'insertion
 
