@@ -27,7 +27,7 @@ CREATE OR REPLACE FUNCTION DATA.get_av_id_piamp_year() RETURNS INTEGER AS $$
 </strong>
 CREATE OR REPLACE FUNCTION DATA.get_av_id_piamp() RETURNS varchar(20) AS $$
     BEGIN
-    RETURN DATA.get_av_id_piamp_year() || '-' || cast(nextval('DATA.s_avis_piamp') as text);
+    RETURN DATA.get_av_id_piamp_year() || '-' || cast(nextval('DATA.S_AVIS_PIAMP_ID') as text);
     END;
 $$ LANGUAGE plpgsql;
 </code></pre>
