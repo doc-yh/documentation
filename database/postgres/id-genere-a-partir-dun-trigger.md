@@ -1,4 +1,4 @@
-# ID personnalisé généré à partir d'un trigger
+# ID généré à partir d'un trigger
 
 Fonction trigger qui se déclenche au moment de l'insertion
 
