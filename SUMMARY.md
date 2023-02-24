@@ -31,6 +31,8 @@
   * [Git](gestion-de-versions/git.md)
 * [Database](database/README.md)
   * [Postgres](database/postgres/README.md)
+    * [Tablespaces](database/postgres/tablespaces.md)
+    * [Search Path](database/postgres/search-path.md)
     * [ID personnalisé complexe (AA-SEQ) généré à partir d'une fonction](database/postgres/id-personnalise-complexe-aa-seq-genere-a-partir-dune-fonction.md)
     * [ID généré à partir d'un trigger](database/postgres/id-genere-a-partir-dun-trigger.md)
   * [Spring](database/spring/README.md)
