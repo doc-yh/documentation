@@ -1,8 +1,6 @@
 # Table of contents
 
 * [Système](README.md)
-  * [Java](systeme/java/README.md)
-    * [Ajouter un certificat au truststore de Java](systeme/java/ajouter-un-certificat-au-truststore-de-java.md)
   * [Docker](systeme/docker/README.md)
     * [WSL (Ubuntu + Docker)](systeme/docker/wsl-ubuntu-+-docker.md)
     * [Image](systeme/docker/commandes.md)
@@ -29,6 +27,8 @@
   * [Windows](systeme/windows/README.md)
     * [Cmder pour windows](systeme/windows/cmder-pour-windows.md)
     * [Batch windows](systeme/windows/batch-windows.md)
+  * [Java](systeme/java/README.md)
+    * [Ajouter un certificat au truststore de Java](systeme/java/ajouter-un-certificat-au-truststore-de-java.md)
 * [Gestion de versions](gestion-de-versions/README.md)
   * [Git](gestion-de-versions/git.md)
 * [Database](database/README.md)
