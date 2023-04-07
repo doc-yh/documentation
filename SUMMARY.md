@@ -1,6 +1,8 @@
 # Table of contents
 
 * [Système](README.md)
+  * [Java](systeme/java/README.md)
+    * [Ajouter un certificat au truststore de Java](systeme/java/ajouter-un-certificat-au-truststore-de-java.md)
   * [Docker](systeme/docker/README.md)
     * [WSL (Ubuntu + Docker)](systeme/docker/wsl-ubuntu-+-docker.md)
     * [Image](systeme/docker/commandes.md)
