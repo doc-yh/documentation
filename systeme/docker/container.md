@@ -15,7 +15,7 @@ docker run -d --name my-container my-image
 ## Se connecter et ouvrir un shell dans un container en mode interactif
 
 ```shell
-docker exec -it my-container /bin/sh
+docker exec -it my-container /bin/bash
 ```
 
 ## Stopper un container
