@@ -43,3 +43,5 @@
     * [HikariCP](database/spring/hikaricp.md)
 * [Sécurité](securite/README.md)
   * [Ajouter un certificat au truststore de Java](securite/ajouter-un-certificat-au-truststore-de-java.md)
+* [AI](ai/README.md)
+  * [Mistral.AI](ai/mistral.ai.md)
